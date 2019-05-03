@@ -173,7 +173,29 @@ namespace Tema3._1_BudianuViorela
             Console.ReadLine();
 
             //Write code to reverse a linked list, if you able to do it using loops, try to solve with recursion?
+           //- Initializam 3 pointeri prev -NULL, curent - head si next -NULL.
+            // -Iteram linked list.In loop:
 
+
+//pointers 
+            LinkedListNode<int> next = null;
+            LinkedListNode<int> prev = null;
+            LinkedListNode<int> current = linked.First;
+
+            while (current != null)
+            {
+                next = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = next;
+
+            }
+            linked.First = prev;
+
+            foreach (var a in linked)
+            {
+                Console.Write(a);
+            }
 
             //How to remove duplicates from a sorted linked list?
             LinkedListNode<int> head = linked.First;
@@ -195,6 +217,65 @@ namespace Tema3._1_BudianuViorela
 
             //How to detect a cycle in a singly linked list?
             //How to merge two sorted linked list, write a program in your favorite programming language e.g. Java, C#
+            LinkedList<int> linked1 = new LinkedList<int>();
+            LinkedList<int> linked2 = new LinkedList<int>();
+            LinkedList<int> linked3 = new LinkedList<int>();
+
+            LinkedListNode<int> nod11 = linked1.AddLast(1);
+            LinkedListNode<int> nod12 = linked1.AddLast(2);
+            LinkedListNode<int> nod13 = linked1.AddLast(3);
+            LinkedListNode<int> nod14 = linked1.AddLast(4);
+            LinkedListNode<int> nod15 = linked1.AddLast(5);
+            LinkedListNode<int> nod16 = linked1.AddLast(6);
+            LinkedListNode<int> nod17 = linked1.AddLast(6);
+            LinkedListNode<int> nod18 = linked1.AddLast(77);
+            LinkedListNode<int> nod19 = linked1.AddLast(77);
+
+            LinkedListNode<int> nod21 = linked2.AddLast(1);
+            LinkedListNode<int> nod22 = linked2.AddLast(12);
+            LinkedListNode<int> nod23 = linked2.AddLast(13);
+            LinkedListNode<int> nod24 = linked2.AddLast(24);
+            LinkedListNode<int> nod25 = linked2.AddLast(51);
+            LinkedListNode<int> nod26 = linked2.AddLast(63);
+            LinkedListNode<int> nod27 = linked2.AddLast(65);
+            LinkedListNode<int> nod28 = linked2.AddLast(77);
+            LinkedListNode<int> nod29 = linked2.AddLast(773);
+
+
+            LinkedListNode<int> current1 = linked1.First;
+            LinkedListNode<int> current2 = linked2.First;
+
+            for (int ii = 0; ii < linked1.Count - 1; ii++)
+            {
+                for (int j = 0; j < linked2.Count - 1; j++)
+                {
+                    if (current1.Value < current2.Value)
+                    {
+                        linked3.AddLast(current1.Value);
+                        current1 = current1.Next;
+
+                    }
+                    else
+                    {
+                        if (current1.Value == current2.Value)
+                        {
+                            linked3.AddLast(current1.Value);
+                            current1 = current1.Next;
+                            current2 = current2.Next;
+                        }
+                        else
+                        {
+                            linked3.AddLast(current2.Value);
+                            current2 = current2.Next;
+                        }
+
+                    }
+                }
+            }
+            foreach (var a in linked3)
+            {
+                Console.WriteLine(a);
+            }
 
         }
 
