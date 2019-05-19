@@ -10,7 +10,7 @@ namespace Tema3._1_BudianuViorela
     {
         static void Main(string[] args)
         {
-            //How to calculate factorial using recursion in C# + iterative + time difference.
+            //3.How to calculate factorial using recursion in C# + iterative + time difference.
             int factor = 1, numar = 20;
             int i = 1;
             while (i <= numar)
@@ -39,14 +39,14 @@ namespace Tema3._1_BudianuViorela
                 Console.WriteLine("Vectorul are elemente unice");
             }
 
-            //How to find sum of digits of a number using Recursion? 
+            //6.How to find sum of digits of a number using Recursion? 
             Console.WriteLine("Numarul");
             int numarul = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(sumaCifrelor(numarul));
 
-            //Given an unsorted array which has a number in the majority (a number appears more than 50% in the array), find that number? 
+            //7.Given an unsorted array which has a number in the majority (a number appears more than 50% in the array), find that number? 
             MajorityAppears();
-            //Write a Program which checks if two Strings are Anagram or not? 
+            //10.Write a Program which checks if two Strings are Anagram or not? 
 
             string cuvant1 = "aaaaaa", cuvant2 = "Labina";
             if (Anagram(cuvant1, cuvant2))
@@ -70,13 +70,13 @@ namespace Tema3._1_BudianuViorela
             // Write a function to remove duplicate characters from String?
             Console.WriteLine(removedupes("Alabalaportocala"));
 
-            //C# program to check if a number is Armstrong number or not?
+            //11. C# program to check if a number is Armstrong number or not?
             n = ArmstrongNumber();
 
-            // Algorithm to check if a number is Prime or not? 
+            // 16. Algorithm to check if a number is Prime or not? 
             NumarPrim();
 
-            //Algorithm to check if a number is a Palindrome ? V
+            //17Algorithm to check if a number is a Palindrome ? V
             Console.Write("numar Palindrom:");
             int numarp = Convert.ToInt32(Console.ReadLine());
 
@@ -90,7 +90,7 @@ namespace Tema3._1_BudianuViorela
                 Console.Write("Nu e numar palindrom");
             }
 
-            //How to rotate an array by a given pivot?
+            //19.How to rotate an array by a given pivot?
             int[] array = new int[5] { 1, 2, 3, 4, 5 };
             int pivot = 2;
             //parcurgem de la al doilea element pana la pivot, si punem primul element intr-o variabila auxiliara
@@ -110,7 +110,7 @@ namespace Tema3._1_BudianuViorela
                 Console.Write(array[j]);
             }
 
-            // Sorting an Array using Selection Sort
+            // 20.Sorting an Array using Selection Sort
 
             int[] array11 = new int[5] { 11, 21, 13, 4, 25 };
             int min = array11[0];
@@ -121,12 +121,12 @@ namespace Tema3._1_BudianuViorela
             {
                 Console.Write(array[j] + ",");
             }
-            //Sorting an Array using Bubble Sort
+            //21.Sorting an Array using Bubble Sort
             int[] array2 = new int[5] { 11, 21, 13, 4, 25 };
             BubbleSort(array2);
             //--------------------------------------------------------------------------
 
-            //How to find the nth element from the end, in a singly linked, in a single pass?
+            //14. How to find the nth element from the end, in a singly linked, in a single pass?
             Console.Write("Al catelea element de la final doriti sa il aflati?");
             int nth = Convert.ToInt32(Console.ReadLine());
 
@@ -215,7 +215,7 @@ namespace Tema3._1_BudianuViorela
 
             }
 
-            //How to detect a cycle in a singly linked list?
+            //How to detect a cycle in a singly linked list? 
             //How to merge two sorted linked list, write a program in your favorite programming language e.g. Java, C#
             LinkedList<int> linked1 = new LinkedList<int>();
             LinkedList<int> linked2 = new LinkedList<int>();
@@ -276,6 +276,11 @@ namespace Tema3._1_BudianuViorela
             {
                 Console.WriteLine(a);
             }
+            string s = "test";
+            StringBuilder sb = new StringBuilder();
+            sb.Append("test");
+            sb.Append("1");
+            string sb1 = sb.ToString();
 
         }
 
